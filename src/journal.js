@@ -5,7 +5,7 @@ export default function Entry(title, body) {
 
 Entry.prototype.getNumWords = function() {
   let words = this.body.split(" ");
-  let wordCount = words.length();
+  let wordCount = words.length;
   return wordCount;
 };
 
@@ -15,9 +15,9 @@ Entry.prototype.getNumVowels = function() {
   let vowelCount = 0;
   let consonantCount = 0;
   for (let i = 0; i < letters.length; i++) {
-    if (letters[i] === vowelList) {
+    if (vowelList.includes(letters[i])) {
       vowelCount++;
-    } else if (letters[i] !== vowelList) {
+    } else if (letters[i] !== " ") {
       consonantCount++;
     }
   }
@@ -30,11 +30,11 @@ Entry.prototype.getTeaser = function() {
   let firstWords = [];
   if (words.length < 8) {  
     for (let i = 0; i < words.length; i++) {
-      firstWords = words[i];
+      firstWords += words[i] + " ";
     } 
   } else {      
     firstWords = words.slice(0,8);
   }
-  firstWords = firstWords.join(" ");
+  //firstWords = firstWords.join(" ");
   return firstWords;
 };

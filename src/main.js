@@ -9,8 +9,8 @@ import $ from 'jquery';
 
 //UI logic ---------------
 $(document).ready(function() {
-  $("journal-form").submit(function(event) {
-    event.PreventDefault();
+  $("#journal-form").submit(function(event) {
+    event.preventDefault();
     const title = $("#title").val();
     const body = $("#body").val();
     const entry = new Entry(title, body);

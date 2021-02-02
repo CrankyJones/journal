@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Journal</title>
 </head>
+
 <body>
   <h1>Journal time!</h1>
   <form id="journal-form">
     <label for="title">Entry title:</label>
     <input id="title" type="text">
-    <label for="body">Content of entry:</label>
+    <label for="body">Entry:</label>
     <input id="body" type="text">
     <button type="submit">Submit!</button>
   </form>
   <div id="output">
-    <p id="vowel-count"></p>
-    <p id="consonant-count"></p>
-    <p id="word-count"></p>
-    <p id="teaser"></p>
+    <p>Number of vowels: <span id="vowel-count"></span></p>
+    <p>Number of consonants: <span id="consonant-count"></span></p>
+    <p>Word count: <span id="word-count"></span></p>
+    <p>Teaser: <span id="teaser"></span></p>
   </div>
 </body>
